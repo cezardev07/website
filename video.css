@@ -1,0 +1,110 @@
+@import url('https:/fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    background-image:linear-gradient(rgba(181, 175, 175, 0.7), rgba(0, 0, 0, 0.964));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.btn
+{
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+}
+.btn .play
+{
+    position: relative;
+    width: 80px;
+    height: 80px;
+    background: #ff0000;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 15px 25px #f42e2e66;
+}
+.btn.active .play
+{
+    box-shadow: 0 0 0 150vh #8d0606;
+    transition: 0.5S;
+}
+.btn .play::before
+{
+    content: '';
+    position: absolute;
+    border: 25px solid rgb(23, 23, 23);
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-right: 0px solid transparent;
+    transform: translate(5px);
+}
+.btn p
+{
+    font-weight: 500;
+    font-size: 1em;
+    color: rgb(158, 157, 157);
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+.clip
+{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(0);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+    transition: 0.5s;
+
+}
+.clip.active
+{
+    transition-delay: 0.5;
+    transform: translate(-50%,-50%) scale(1);
+}
+.clip video
+{
+    max-width: 900px;
+    outline: none;
+    border: 10px solid rgb(0, 0, 0);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.25);    
+}
+
+.clip .close
+{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    cursor: pointer;
+    font-weight: 300;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: rgb(255, 255, 255);
+}
+.close:hover
+{
+    color: #000000;
+}
+@media(max-width: 991px)
+{
+    .clip video
+    {
+        max-width: 90%;
+    }
+}
