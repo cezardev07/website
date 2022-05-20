@@ -110,9 +110,14 @@ span{
     left: 45%;
 
 }
-a .play :hover{
+.play:hover{
+    color: rgb(0, 0, 0);
+}
+.cv:hover
+{
     color: black;
 }
+
 @media screen and (max-width: 768px)
 {
     body{
