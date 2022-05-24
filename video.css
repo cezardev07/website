@@ -12,6 +12,23 @@ body{
     align-items: center;
     min-height: 100vh;
 }
+ul li
+{
+    list-style: none;
+    margin-top: 0px 100px;
+}
+a
+{
+    color: red;
+    text-decoration: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    position: absolute;
+    top: 20px;
+    right: 91.5%;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 10px;
+}
 .btn
 {
     position: relative;
@@ -107,4 +124,8 @@ body{
     {
         max-width: 90%;
     }
+}
+a:hover
+{
+    color: #000000;
 }
